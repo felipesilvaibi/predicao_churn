@@ -14,16 +14,16 @@ Configuração de Ambiente
 Observação: Ao seguir os passos abaixo, substituir todas as informações pessoais (nome e email "felipe") por informações pessoas próprias (o email
 deverá ser o mesmo utilizado no github) 
 
-1. Baixar o virtualbox, criar uma nova máquina virtual ubuntu e vincular a imagem (sistema operacional) mais recente 
+1. (No windows) Baixar o virtualbox, criar uma nova máquina virtual ubuntu e vincular a imagem (sistema operacional) mais recente 
 do ubuntu a máquina criada (https://www.youtube.com/watch?v=7FCYFy0J4NQ&ab_channel=AGclubedainform%C3%A1tica)
 
-2. Realizar o download do VSCode
+2. (No windows) Realizar o download do VSCode
 Observação: Instalar as extensões "Python intelissence", "Jupyter Notebook Renderes", "Remote - SSH", "Material Icon Theme"
 
 3. Seguir os passos do documento "Configurao_do_Servidor_na_VM_Ubuntu.pdf"
 - Observação: Utilizar o terminal do VSCode (Terminal / New Terminal)
 
-4. (No diretório da máquina virtual "Ubuntu" (através do VSCode aberto no windows) seguir os passos do arquivo "Criao_de_Ambiente_Virtual_no_VSCode.pdf"
+4. No diretório da máquina virtual "Ubuntu" (através do VSCode aberto no windows) seguir os passos do arquivo "Criao_de_Ambiente_Virtual_no_VSCode.pdf"
 
 5. Seguir os passos do arquivo "Integrando_com_o_Git_Hub.pdf"
 
