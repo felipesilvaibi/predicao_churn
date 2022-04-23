@@ -1,0 +1,3 @@
+1. Adicionar as colunas "quantidade de meses contratante" e "média de quality score" para cada registro
+2. Utilizar o bayes search para encontrar os melhores hyperparametros para os modelos
+3. Fazer análise da serie temporal conforme o link "https://www.mariofilho.com/como-criar-um-modelo-simples-para-prever-series-temporais-usando-machine-learning-em-python/"
