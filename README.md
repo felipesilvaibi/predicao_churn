@@ -9,3 +9,11 @@ Organização das Pastas
 Instalação de Bibliotecas
 ----
 - Instalar todas as bibliotecas da pasta requirements ($ sudo pip install -r requirements.txt)
+
+Métricas do modelo
+----
+- F1 Score: 86.03%
+- Accuracy Score: 96.15%
+- Precision Score: 87.44%
+- Recall Score: 64.36%
+- Curva ROC = 0,95 (AUC)
