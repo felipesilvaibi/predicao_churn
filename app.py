@@ -1,18 +1,23 @@
-from flask import Flask, request, jsonify
+from flask import Flask, request
 import pandas as pd
-import joblib
+import mlflow
 
 app = Flask(__name__)
 
-@app.route("/predict", methods=["GET"])
+@app.route("/predict", methods=["POST"])
 def home():
     data = request.get_json()["data"]
     df = pd.DataFrame.from_dict(data)
 
-    model = joblib.load("src/models/GB_churn_imovel_web.pkl")
-    predictions = model.predict(df)
+    mlflow.set_experiment("Churn Prediction")
+    last_run = dict(mlflow.search_runs().sort_values(by="start_time", ascending=False).iloc[0])
+    artifact_uri = last_run["artifact_uri"]
+    model = mlflow.sklearn.load_model(artifact_uri + "/model_pipeline")
 
-    return predictions
+    predictions = model.predict(df)
+    output = predictions[0]
+
+    return "Churn Prediction {}".format(output)
 
 
 if __name__ == "__main__":
