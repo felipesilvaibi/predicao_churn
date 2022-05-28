@@ -9,14 +9,15 @@ def home():
     data = request.get_json()["data"]
     df = pd.DataFrame.from_dict(data)
 
-    mlflow.set_experiment("Churn Prediction")
-    last_run = dict(mlflow.search_runs().sort_values(by="start_time", ascending=False).iloc[0])
-    artifact_uri = last_run["artifact_uri"]
+    mlflow.set_experiment('Churn Prediction')
+
+    last_run = mlflow.search_runs().sort_values(by="start_time", ascending=False).iloc[:1]
+    artifact_uri = last_run["artifact_uri"][0]
+
     model = mlflow.sklearn.load_model(artifact_uri + "/model_pipeline")
-
     predictions = model.predict(df)
-    output = predictions[0]
 
+    output = predictions[0]
     return "Churn Prediction {}".format(output)
 
 
