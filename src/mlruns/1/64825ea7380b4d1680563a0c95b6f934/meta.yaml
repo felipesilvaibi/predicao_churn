@@ -1,0 +1,15 @@
+artifact_uri: file:///home/felipe/dev/predicao_churn/src/mlruns/1/64825ea7380b4d1680563a0c95b6f934/artifacts
+end_time: 1653699031784
+entry_point_name: ''
+experiment_id: '1'
+lifecycle_stage: active
+name: ''
+run_id: 64825ea7380b4d1680563a0c95b6f934
+run_uuid: 64825ea7380b4d1680563a0c95b6f934
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1653699014522
+status: 3
+tags: []
+user_id: felipe
