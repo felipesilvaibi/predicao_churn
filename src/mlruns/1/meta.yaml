@@ -1,4 +1,0 @@
-artifact_location: file:///home/felipe/dev/predicao_churn/src/mlruns/1
-experiment_id: '1'
-lifecycle_stage: active
-name: Churn Prediction
