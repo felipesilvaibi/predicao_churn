@@ -8,7 +8,7 @@ Organização das Pastas
 - mlruns: Meta dados para versionamento do modelo (mlflow)
 - src: Arquivos de treino do modelo e predição de dados
 
-Passos para a execução da predição:
+Passos para a execução da predição
 ----
 1. Executar o comando `python src/train.py`
     - O modelo será treinando e armazenado em uma nova versão, na pasta mlruns
@@ -21,18 +21,20 @@ Passos para a execução da predição:
     - Método: Post
     - Body: Informar o conteúdo do arquivo data/churn_predict.json
     - Executar e verificar o retorno na seguinte estrutura:
-            [
-            {
-                "id_sap": 1,
-                "churn": "não"
-            },
-            {
-                "id_sap": 1,
-                "churn": "não"
-            }
-            ]
+```
+[
+    {
+        "id_sap": 1,
+        "churn": "não"
+    },
+    {
+        "id_sap": 1,
+        "churn": "não"
+    }
+]
+```
 
-Painel de acesso do versionamento do modelo:
+Painel de acesso do versionamento do modelo
 ----
 
 1. Executar o comando `mlflow ui`
