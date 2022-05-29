@@ -26,13 +26,7 @@ class Fitter:
 
     def run(self):
         self.carregaDataSet()
-        self.corrigeNomeclaturaColunas()
-        self.criaVariavelTarget()
-        self.criaVariavelQuantidadeMes()
-        self.criaVariavelStatusPagamento()
-        self.corrigeValoresColunasCategoricas()
-        self.selecionaColunasSignificativas()
-        self.dropaValoresStatusPagamentoEmBranco()
+        self.trataDados()
 
         pipeline = self.criaPipeline()
         X_train, X_test, y_train, y_test = self.splitDataSet()
@@ -40,7 +34,16 @@ class Fitter:
         self.fit(pipeline=pipeline, X_train=X_train, y_train=y_train)
         y_pred = self.predict(pipeline=pipeline, X_test=X_test)
 
-        self.criaExperimentoMlFlow(pipeline=pipeline, X_test=X_test, y_test=y_test, y_pred=y_pred)
+        self.salvaModeloVersao(pipeline=pipeline, X_test=X_test, y_test=y_test, y_pred=y_pred)
+
+    def trataDados(self):
+        self.corrigeNomeclaturaColunas()
+        self.criaVariavelTarget()
+        self.criaVariavelQuantidadeMes()
+        self.criaVariavelStatusPagamento()
+        self.corrigeValoresColunasCategoricas()
+        self.selecionaColunasSignificativas()
+        self.dropaValoresStatusPagamentoEmBranco()
 
     def carregaDataSet(self):
         self.df = pd.read_feather('./data/carteira_total.feather')
@@ -152,7 +155,7 @@ class Fitter:
     def predict(self, pipeline, X_test):
         return pipeline.predict(X_test)
 
-    def criaExperimentoMlFlow(self, pipeline, X_test, y_test, y_pred):
+    def salvaModeloVersao(self, pipeline, X_test, y_test, y_pred):
         # Criação do experimento
         mlflow.set_experiment('Churn Prediction')
 
