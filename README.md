@@ -11,6 +11,7 @@ Estrutura das Pastas
 ├── docs                   # Arquivos de documentação da API
 ├── src                    # Arquivos da aplicação
 │   ├── controllers        # Arquivos de treino do modelo e predição de dados
+│   ├── models             # Arquivos de modelo para requests e responses da API
 │   ├── routes             # Rota para acesso ao arquivo de predição
 │   └── server             # Servidor Flask
 ├── .env 
