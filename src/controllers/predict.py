@@ -15,6 +15,6 @@ class Predicter:
         model = mlflow.sklearn.load_model(artifact_uri + "/model_pipeline")
 
         predictions = model.predict(self.df.drop(columns='id_sap'))
-        self.df['churn'] = pd.Series(predictions).apply(lambda x: 'sim' if x == 1 else 'não')
+        self.df['churn'] = pd.Series(predictions).apply(lambda x: True if x == 1 else False)
 
-        return self.df[['id_sap', 'churn']].to_json(orient='records')
+        return self.df[['id_sap', 'churn']].to_dict(orient='records')
