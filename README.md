@@ -19,7 +19,7 @@ Passos para a execução da predição
 3. Em alguma ferramenta de simulação de requisição http (Thunder, Postman, ...)
     - Query String: http://127.0.0.1:5000/predict
     - Método: Post
-    - Body: Informar o conteúdo do arquivo data/churn_predict.json
+    - Body: Informar o conteúdo do arquivo `data/churn_predict.json`
     - Executar e verificar o retorno na seguinte estrutura:
 ```
 [
@@ -28,7 +28,7 @@ Passos para a execução da predição
         "churn": "não"
     },
     {
-        "id_sap": 1,
+        "id_sap": 2,
         "churn": "não"
     }
 ]
