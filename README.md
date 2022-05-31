@@ -5,18 +5,27 @@ Estrutura das Pastas
 ----
 ```
 .
-├── analysis               # Arquivos de análises (.CSV, .XLSX, JSON, ...) Toda a qualquer análise (sendo arquivo .ipynb ou .py) 
-├── data                   # Arquivos utilizados nas análises (.CSV, .XLSX, JSON, ...)
-├── mlruns                 # Meta dados de versionamento do modelo (mlflow)
-├── docs                   # Arquivos de documentação da API
-├── src                    # Arquivos da aplicação
-│   ├── controllers        # Arquivos de treino do modelo e predição de dados
-│   ├── models             # Arquivos de modelo para requests e responses da API
-│   ├── routes             # Rota para acesso ao arquivo de predição
-│   └── server             # Servidor Flask
-├── .env 
+├── analysis                            # Arquivos de análises (.CSV, .XLSX, JSON, ...) Toda a qualquer análise (sendo arquivo .ipynb ou .py) 
+├── data                                # Arquivos utilizados nas análises (.CSV, .XLSX, JSON, ...)
+├── mlruns                              # Meta dados de versionamento do modelo (mlflow)
+├── src                                 # Arquivos da aplicação
+│   └── flask                           # Servidor Flask
+│       └── app                         # Aplicação 
+│           ├── controllers             # Arquivos de treino do modelo e predição de dados
+│           ├── models                  # Modelo para a request e response da API
+│           ├── routes                  # Rota para acesso ao arquivo de predição
+│           └── requirements.txt        # Dependências do Projeto
+│       ├── env                         # Ambiente Virtual (somente disponível no repositório de desenvolvimento, e no docker)
+│       ├── .dockerignore               # Arquivos ignorados pelo docker
+│       ├── app.ini                     # Configurações da aplicação
+│       ├── Dockerfile                  # Arquivo de configurações docker
+│       └── run.py                      # Starter da aplicação
+│   └── ngix                            # Servidor Nginx
+│       ├── Dockerfile                  # Arquivo de configurações docker 
+│       └── app.ini                     # Configurações do servidor
+├── .env.example
 ├── .gitignore
-├── main.py
+├── .docker-compose.yml                 # Arquivo de execução dos containers docker em parapelo
 └── README.md
 
 ```    
