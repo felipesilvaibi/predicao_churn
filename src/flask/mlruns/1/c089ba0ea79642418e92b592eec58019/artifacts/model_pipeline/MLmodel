@@ -11,8 +11,8 @@ flavors:
     serialization_format: cloudpickle
     sklearn_version: 1.0.2
 mlflow_version: 1.26.0
-model_uuid: bda4940ca4a54ca79be68c4050c2c40c
-run_id: 1aa3a277801e4aacb89208f37dbcc449
+model_uuid: 2bd2e21279984e9f9d69113e7cde12b6
+run_id: c089ba0ea79642418e92b592eec58019
 signature:
   inputs: '[{"name": "pf_pj", "type": "string"}, {"name": "contratado_ofertas_simples",
     "type": "long"}, {"name": "utilizado_ofertas_simples", "type": "double"}, {"name":
@@ -23,4 +23,4 @@ signature:
     {"name": "tipo_de_plano", "type": "string"}, {"name": "frequencia_de_faturamento",
     "type": "string"}]'
   outputs: '[{"type": "tensor", "tensor-spec": {"dtype": "int64", "shape": [-1]}}]'
-utc_time_created: '2022-05-29 23:24:15.878025'
+utc_time_created: '2022-06-01 00:08:20.135432'
