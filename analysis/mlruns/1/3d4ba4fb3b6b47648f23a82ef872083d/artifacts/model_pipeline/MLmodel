@@ -1,0 +1,26 @@
+artifact_path: model_pipeline
+flavors:
+  python_function:
+    env: conda.yaml
+    loader_module: mlflow.sklearn
+    model_path: model.pkl
+    python_version: 3.8.10
+  sklearn:
+    code: null
+    pickled_model: model.pkl
+    serialization_format: cloudpickle
+    sklearn_version: 1.0.2
+mlflow_version: 1.26.0
+model_uuid: 27f8510a51474d438291019d89233d9d
+run_id: 3d4ba4fb3b6b47648f23a82ef872083d
+signature:
+  inputs: '[{"name": "pf_pj", "type": "string"}, {"name": "total_utilizado_relativo",
+    "type": "double"}, {"name": "contratado_ofertas_simples", "type": "long"}, {"name":
+    "utilizado_ofertas_simples", "type": "double"}, {"name": "leads_form", "type":
+    "double"}, {"name": "equipe", "type": "string"}, {"name": "utilizado_destaque",
+    "type": "double"}, {"name": "valor_mensal", "type": "double"}, {"name": "quantidade_mes",
+    "type": "long"}, {"name": "status_pagamento", "type": "string"}, {"name": "regiao",
+    "type": "string"}, {"name": "oficina", "type": "string"}, {"name": "tipo_de_plano",
+    "type": "string"}, {"name": "frequencia_de_faturamento", "type": "string"}]'
+  outputs: '[{"type": "tensor", "tensor-spec": {"dtype": "int64", "shape": [-1]}}]'
+utc_time_created: '2022-06-03 02:30:31.031219'
