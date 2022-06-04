@@ -22,3 +22,15 @@ services:
       - flask
     ports:
       - "8120:80"
+
+  mlflow:
+    restart: always
+    image: mlflow_server
+    container_name: mlflow_server
+    environment:
+      - PROTOCOL_BUFFERS_PYTHON_IMPLEMENTATION=python
+    ports:
+      - "5000:5000"
+    depends_on:
+      - flask
+    command: mlflow server --host 0.0.0.0 --default-artifact-root mlruns

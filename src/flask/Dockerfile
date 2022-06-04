@@ -1,5 +1,5 @@
 
-# Use the Python3.7.2 container image
+# Use the python:3.8.10  container image
 FROM python:3.8.10 
 
 # Set the working directory to /app
