@@ -1,13 +1,10 @@
 # Análise de Predição de Churn
 Predição de churn da empresa de venda e aluguel de imóveis
 
-<<<<<<< HEAD
 Observação: Somente realizado o upload dos arquivos de data para fins didáticos (ambos não possuem informações que infringem a lgpd, não necessitando
 a anomizização dos dados
-)
+) 
 
-=======
->>>>>>> 94e4c339bb46b4c731e8b3fcaaba6fa4b895c7ea
 Estrutura das Pastas
 ----
 ```
