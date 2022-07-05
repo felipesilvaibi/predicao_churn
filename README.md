@@ -1,5 +1,5 @@
 # Análise de Predição de Churn
-Predição de churn da empresa de venda e aluguel de imóveis "Imovel Web"
+Predição de churn da empresa de venda e aluguel de imóveis
 
 Estrutura das Pastas
 ----
