@@ -47,7 +47,11 @@ class Fitter:
         self.dropaValoresStatusPagamentoEmBranco()
 
     def carregaDataSet(self):
+<<<<<<< HEAD
         self.df = pd.read_feather(os.path.join(os.getcwd(), "data/carteira_total.feather"))
+=======
+        self.df = pd.read_feather(os.path.join(os.getcwd(), "../../data/carteira_total.feather"))
+>>>>>>> 94e4c339bb46b4c731e8b3fcaaba6fa4b895c7ea
 
     def corrigeNomeclaturaColunas(self):
         newColumnsName = []
@@ -71,7 +75,11 @@ class Fitter:
         self.df = self.df.join(df_grouped.set_index('id_sap'), on='id_sap')
 
     def criaVariavelStatusPagamento(self):
+<<<<<<< HEAD
         xls = pd.ExcelFile(os.path.join(os.getcwd(), "data/quality_score.xlsx"))
+=======
+        xls = pd.ExcelFile(os.path.join(os.getcwd(), "../../data/quality_score.xlsx"))
+>>>>>>> 94e4c339bb46b4c731e8b3fcaaba6fa4b895c7ea
         xls.sheet_names
 
         i = 0

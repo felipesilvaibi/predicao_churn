@@ -21,6 +21,7 @@ services:
     depends_on:
       - flask
     ports:
+<<<<<<< HEAD
       - "8120:80"
 
   mlflow:
@@ -34,3 +35,6 @@ services:
     depends_on:
       - flask
     command: mlflow server --host 0.0.0.0 --default-artifact-root mlruns
+=======
+      - "8120:80"
+>>>>>>> 94e4c339bb46b4c731e8b3fcaaba6fa4b895c7ea
