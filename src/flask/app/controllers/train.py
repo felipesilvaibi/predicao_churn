@@ -47,11 +47,7 @@ class Fitter:
         self.dropaValoresStatusPagamentoEmBranco()
 
     def carregaDataSet(self):
-<<<<<<< HEAD
         self.df = pd.read_feather(os.path.join(os.getcwd(), "data/carteira_total.feather"))
-=======
-        self.df = pd.read_feather(os.path.join(os.getcwd(), "../../data/carteira_total.feather"))
->>>>>>> 94e4c339bb46b4c731e8b3fcaaba6fa4b895c7ea
 
     def corrigeNomeclaturaColunas(self):
         newColumnsName = []
@@ -60,7 +56,7 @@ class Fitter:
         self.df.columns = newColumnsName
 
     def criaVariavelTarget(self):
-        self.df["upsale_downsale"].replace(
+        self.df["upsale_downsale"].replace( 
             {"Churn": "churn", "Upsell": "upsell", "Downsell": "downsell", "Ok": "ok"}, inplace=True)
         self.df['churn'] = self.df['upsale_downsale']
         self.df['churn'].replace({"ok": "0", "upsell": "0", "downsell": "0", "churn": "1"}, inplace=True)
@@ -75,11 +71,7 @@ class Fitter:
         self.df = self.df.join(df_grouped.set_index('id_sap'), on='id_sap')
 
     def criaVariavelStatusPagamento(self):
-<<<<<<< HEAD
         xls = pd.ExcelFile(os.path.join(os.getcwd(), "data/quality_score.xlsx"))
-=======
-        xls = pd.ExcelFile(os.path.join(os.getcwd(), "../../data/quality_score.xlsx"))
->>>>>>> 94e4c339bb46b4c731e8b3fcaaba6fa4b895c7ea
         xls.sheet_names
 
         i = 0

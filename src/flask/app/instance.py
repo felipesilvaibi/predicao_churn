@@ -8,7 +8,7 @@ class Server():
             version='1.0',
             title='API para Predição de Churn',
             description='API para a predição de churn de clientes da imovel web',
-            doc='/docs'
+            doc='/docs' 
         )
 
     def run(self, ):
